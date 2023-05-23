@@ -19,13 +19,13 @@ let toReplace = await arg(
         if (!input)
             return {
                 name: `Replace ${input}`,
-                preview: md(text.replaceAll("\n", "<br/>")),
+                preview: md(text.replaceAll("\n", "<br>")),
                 value: text,
             };
         return {
             name: `Replace ${input}`,
             preview: md(
-                text.replaceAll("\n", "<br/>").replaceAll(input, `<ins>${input}</ins>`)
+                text.replaceAll("\n", "<br>").replaceAll(input, `<ins>${input}</ins>`)
             ),
             value: input,
         };
@@ -43,7 +43,7 @@ let replaceWith = await arg(
                 name: `Replace ${input}`,
                 preview: md(
                     text
-                        .replaceAll("\n", "<br/>")
+                        .replaceAll("\n", "<br>")
                         .replaceAll(toReplace, `<ins>${toReplace}</ins>`)
                 ),
                 value: text,
@@ -52,7 +52,7 @@ let replaceWith = await arg(
             name: `Replace ${input}`,
             preview: md(
                 `${text
-                    .replaceAll("\n", "<br/>")
+                    .replaceAll("\n", "<br>")
                     .replaceAll(toReplace, `<ins>${input}</ins>`)}`
             ),
             value: input,
