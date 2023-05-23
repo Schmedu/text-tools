@@ -1,4 +1,4 @@
-// Name: Replace Text ↔️
+// Name: Replace Text
 // Description: Replace text in the selected text.
 // Input: Selected text
 // Output: Changed selected text
@@ -7,7 +7,7 @@
 // Twitter: @schmedu_
 // Linkedin: https://www.linkedin.com/in/euffelmann/
 // Website: https://uffelmann.me
-// Shortcut: ctrl+r
+// Shortcut: shift control R
 
 import "@johnlindquist/kit";
 

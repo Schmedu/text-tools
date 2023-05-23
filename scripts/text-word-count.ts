@@ -1,4 +1,4 @@
-// Name: Text Word Count 🔢
+// Name: Text Word Count
 // Description: Counts the words in the selected text. It's a simple algorithm that counts the spaces between words.
 // Input: Selected text
 // Output: Notification with the word count

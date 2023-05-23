@@ -1,4 +1,4 @@
-// Name: Get Text Length ⌨
+// Name: Get Text Length
 // Description: Return the length of the selected text.
 // Input: Selected text
 // Output: Notification with the word count
