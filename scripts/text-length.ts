@@ -10,8 +10,11 @@
 
 import "@johnlindquist/kit";
 
-let text = await getSelectedText();
+let input = await getSelectedText();
 
-let result = text.length;
+let result = input.length;
 
-notify(result.toString());
+notify({
+    title: "Text Length",
+    message: result.toString(),
+});
