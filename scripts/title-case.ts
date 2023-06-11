@@ -2,6 +2,7 @@
 // Description: Convert the selected text to title case.
 // Input: Selected text
 // Output: Changed selected text
+// Video: lxf5W8EWGqU
 // Tags: title case, text
 // Author: Eduard Uffelmann
 // Twitter: @schmedu_

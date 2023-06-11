@@ -3,6 +3,7 @@
 // Input: None
 // Output: Notification with the generated text
 // Tags: create text, lorem ipsum
+// Video: kVmLG9osea4
 // Author: Eduard Uffelmann
 // Twitter: @schmedu_
 // Linkedin: https://www.linkedin.com/in/euffelmann/

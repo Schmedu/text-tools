@@ -3,10 +3,13 @@
 // Input: Selected text
 // Output: Changed selected text
 // Tags: text, case, convert, transform
+// Video: vTwgfNHP6b0
 // Author: Eduard Uffelmann
 // Twitter: @schmedu_
 // Linkedin: https://www.linkedin.com/in/euffelmann/
 // Website: https://uffelmann.me
+
+import "@johnlindquist/kit";
 
 import * as changeCase from "change-case";
 import { swapCase } from "swap-case";
