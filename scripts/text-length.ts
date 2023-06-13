@@ -1,5 +1,6 @@
 // Name: Get Text Length
 // Description: Return the length of the selected text.
+// Video: xAYnKCIH0F0
 // Input: Selected text
 // Output: Notification with the word count
 // Tags: text, word count

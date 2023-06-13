@@ -1,5 +1,6 @@
 // Name: Text Word Count
 // Description: Counts the words in the selected text. It's a simple algorithm that counts the spaces between words.
+// Video: nzzj6DoPv-Y
 // Input: Selected text
 // Output: Notification with the word count
 // Tags: text, word count
