@@ -1,6 +1,6 @@
 // Name: Replace Text
 // Description: Replace text in the selected text.
-// Video: z4B6cPqMPtw
+// Video: 0ASMwM1DChs
 // Input: Selected text
 // Output: Changed selected text
 // Tags: text, replace text
@@ -31,7 +31,7 @@ let buildPreview = ([search, replacement]) => {
 
 let [search, replacement] = await fields({
     fields: ["Search", "Replacement"],
-    preview: buildPreview([]),
+    preview: buildPreview(["", ""]),
     onChange: async (input, state) => {
         let preview = buildPreview(state?.value);
         setPreview(preview);
