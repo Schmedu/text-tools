@@ -1,5 +1,6 @@
 // Name: Replace Text
 // Description: Replace text in the selected text.
+// Video: z4B6cPqMPtw
 // Input: Selected text
 // Output: Changed selected text
 // Tags: text, replace text
@@ -11,56 +12,34 @@
 
 import "@johnlindquist/kit";
 
-let text = await getSelectedText();
+let input = await getSelectedText();
 
-let toReplace = await arg(
-    { placeholder: "What to replace?", strict: false },
-    (input) => {
-        if (!input)
-            return {
-                name: `Replace ${input}`,
-                preview: md(text.replaceAll("\n", "<br>")),
-                value: text,
-            };
-        return {
-            name: `Replace ${input}`,
-            preview: md(
-                text.replaceAll("\n", "<br>").replaceAll(input, `<ins>${input}</ins>`)
-            ),
-            value: input,
-        };
-    }
-);
+let buildPreview = ([search, replacement]) => {
+    if (!search) return md(input);
+    if (!replacement)
+        return md(
+            `${input
+                .replaceAll("\n", "<br>")
+                .replaceAll(search, `<ins>${search}</ins>`)}`
+        );
+    return md(
+        `${input
+            .replaceAll("\n", "<br>")
+            .replaceAll(search, `<ins>${replacement}</ins>`)}`
+    );
+};
 
-let replaceWith = await arg(
-    {
-        placeholder: "What is the new text?",
-        strict: false,
+let [search, replacement] = await fields({
+    fields: ["Search", "Replacement"],
+    preview: buildPreview([]),
+    onChange: async (input, state) => {
+        let preview = buildPreview(state?.value);
+        setPreview(preview);
     },
-    (input) => {
-        if (!input)
-            return {
-                name: `Replace ${input}`,
-                preview: md(
-                    text
-                        .replaceAll("\n", "<br>")
-                        .replaceAll(toReplace, `<ins>${toReplace}</ins>`)
-                ),
-                value: text,
-            };
-        return {
-            name: `Replace ${input}`,
-            preview: md(
-                `${text
-                    .replaceAll("\n", "<br>")
-                    .replaceAll(toReplace, `<ins>${input}</ins>`)}`
-            ),
-            value: input,
-        };
-    }
-);
+});
 
-let result = text.replaceAll(toReplace, replaceWith);
+div(); // will be fixed soon, see https://github.com/johnlindquist/kit/issues/1275
+let result = input.replaceAll(search, replacement);
 
 // Output
 await setSelectedText(result);
