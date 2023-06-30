@@ -35,24 +35,28 @@ let count = await arg(
     },
     (input) => {
         if (input === "")
-            return {
-                name: `How many units?`,
+            return [
+                {
+                    name: `How many units?`,
+                    preview: loremIpsum({
+                        count: 1,
+                        units: units,
+                        format: "html",
+                    }),
+                    value: "1",
+                },
+            ];
+        return [
+            {
+                name: input,
                 preview: loremIpsum({
-                    count: 1,
+                    count: parseInt(input),
                     units: units,
                     format: "html",
                 }),
-                value: 1,
-            };
-        return {
-            name: input,
-            preview: loremIpsum({
-                count: parseInt(input),
-                units: units,
-                format: "html",
-            }),
-            value: input,
-        };
+                value: input,
+            },
+        ];
     }
 );
 

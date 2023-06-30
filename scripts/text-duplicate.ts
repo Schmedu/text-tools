@@ -1,6 +1,6 @@
-// Name: Replace Text
-// Description: Replace text in the selected text.
-// Video: 0ASMwM1DChs
+// Name: Duplicate Text
+// Description: Duplicate the selected text by replacing a word with multiple variations, divided by a comma separator.
+// Video:
 // Input: Selected text
 // Output: Changed selected text
 // Tags: text, replace text
@@ -8,7 +8,6 @@
 // Twitter: @schmedu_
 // Linkedin: https://www.linkedin.com/in/euffelmann/
 // Website: https://uffelmann.me
-// Shortcut: shift control R
 
 import "@johnlindquist/kit";
 
@@ -23,9 +22,15 @@ let buildPreview = ([search, replacement]) => {
                 .replaceAll(search, `<ins>${search}</ins>`)}`
         );
     return md(
-        `${input
-            .replaceAll("\n", "<br>")
-            .replaceAll(search, `<ins>${replacement}</ins>`)}`
+        `${input}
+${replacement
+            .split(",")
+            .map((item) => {
+                return input
+                    .replaceAll("\n", "<br>")
+                    .replaceAll(search, `<ins>${item}</ins>`);
+            })
+            .join("<br>")}`
     );
 };
 
@@ -38,7 +43,13 @@ let [search, replacement] = await fields({
     },
 });
 
-let result = input.replaceAll(search, replacement);
+let result = `${input}
+${replacement
+        .split(",")
+        .map((item) => {
+            return input.replaceAll(search, `${item}`);
+        })
+        .join("\n")}`;
 
 // Output
 await setSelectedText(result);
