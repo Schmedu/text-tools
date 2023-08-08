@@ -1,6 +1,5 @@
 // Name: Duplicate Text
 // Description: Duplicate the selected text by replacing a word with multiple variations, divided by a comma separator.
-// Video:
 // Input: Selected text
 // Output: Changed selected text
 // Tags: text, replace text
