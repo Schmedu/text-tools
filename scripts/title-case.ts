@@ -7,7 +7,7 @@
 // Author: Eduard Uffelmann
 // Twitter: @schmedu_
 // Linkedin: https://www.linkedin.com/in/euffelmann/
-// Website: https://uffelmann.me
+// Website: https://schmedu.com
 
 import "@johnlindquist/kit";
 import { titleCase } from "title-case";
