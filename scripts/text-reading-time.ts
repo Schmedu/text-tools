@@ -18,5 +18,5 @@ let stats = readingTime(input);
 
 notify({
     title: `Reading time`,
-    message: `${stats.minutes} Minutes`,
+    body: `${stats.minutes} Minutes`,
 });

@@ -17,5 +17,5 @@ let result = input.length;
 
 notify({
     title: "Text Length",
-    message: result.toString(),
+    body: result.toString(),
 });

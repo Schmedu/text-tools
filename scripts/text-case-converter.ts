@@ -42,11 +42,11 @@ let stringCase = await arg("What case?", [
         preview: md(changeCase.dotCase(input)),
         value: changeCase.dotCase(input),
     },
-    {
-        name: "Header-Case",
-        preview: md(changeCase.headerCase(input)),
-        value: changeCase.headerCase(input),
-    },
+    // {
+    //     name: "Header-Case",
+    //     preview: md(changeCase.headerCase(input)),
+    //     value: changeCase.headerCase(input),
+    // },
     {
         name: "no case",
         preview: md(changeCase.noCase(input)),

@@ -69,3 +69,4 @@ const lipsum = loremIpsum({
 });
 
 await setSelectedText(lipsum);
+await copy(lipsum)

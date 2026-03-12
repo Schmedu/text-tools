@@ -1,8 +1,8 @@
 // Name: Title Case
 // Description: Convert the selected text to title case.
+// Video: lxf5W8EWGqU
 // Input: Selected text
 // Output: Changed selected text
-// Video: lxf5W8EWGqU
 // Tags: title case, text
 // Author: Eduard Uffelmann
 // Twitter: @schmedu_
